@@ -78,6 +78,22 @@
   
   // 首部与照片
 
+  // if headerCenter {
+  //   assert(photograph == "", message: "can not centerize the name with the photo")
+  //   align(alignment.center, header)
+  //   introduction
+  // } else {
+  //   grid(
+  //     columns: (auto, 1fr, photographWidth),
+  //     gutter: (gutterWidth, 0em),
+      
+  //     [#header 
+  //     #introduction],
+  //     if (photograph != "") {
+  //       image(photograph, width: photographWidth)
+  //     }
+  //   )
+  // }
   if headerCenter {
     assert(photograph == "", message: "can not centerize the name with the photo")
     align(alignment.center, header)
@@ -87,8 +103,9 @@
       columns: (auto, 1fr, photographWidth),
       gutter: (gutterWidth, 0em),
       
-      [#header 
+      align(horizon)[#header 
       #introduction],
+      h(2em),
       if (photograph != "") {
         image(photograph, width: photographWidth)
       }
@@ -145,7 +162,7 @@
           dir.content
         }
       })
-    }).join(h(0.5em) + "·" + h(0.5em))
+    }).join(h(0.5em) + "" + h(0.5em))
     v(0.5em)
 }
 
