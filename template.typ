@@ -57,7 +57,7 @@
   // 更改 bullet list 的图标
   // set list(indent: 1em, body-indent: 0.8em, marker: faAngleRight)
   // 上面的语句无法精确控制图标位置, 因此改用了下列方法重写 list
-  show list: it => stack(spacing: 0.4em, ..it.children.map(item => {
+  show list: it => stack(spacing: 0.8em, ..it.children.map(item => {
     grid(
       columns: (2em, 1fr),
       gutter: (0em),
